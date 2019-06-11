@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/emrullahayin/react-infinite-scroll#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-register": "^6.26.0",
     "concurrently": "^4.1.0",
     "express": "^4.17.1",
