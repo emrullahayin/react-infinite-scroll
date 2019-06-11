@@ -4,36 +4,44 @@ import styled from "styled-components";
 import "normalize.css";
 import "./App.scss";
 
-const columnsStyle = {
-  transition: "all .5s ease-in-out",
-  columnGap: "30px",
-  columnFll: "initial"
-};
+const Wrapper = styled.div`
+  transition: all 0.5s ease-in-out;
+  column-gap: 30px;
+  column-fll: initial;
+`;
 
-const figureStyle = {
-  marginBottom: "30px",
-  display: "inline-block",
-  verticalAlign: "top"
-};
+const Figure = styled.figure`
+  margin-bottom: 30px;
+  display: inline-block;
+  vertical-align: top;
+`;
 
-const imageStyle = {
-  transition: "all .5s ease-in-out",
-  backfaceVisibility: "hidden",
-  maxWidth: "100%",
-  verticalAlign: "middle"
-};
+const Image = styled.img`
+  transition: all 0.5s ease-in-out;
+  backface-visibility: hidden;
+  max-width: 100%;
+  vertical-align: middle;
+`;
 
 const App = () => {
   return (
-    <div className="columns" style={columnsStyle}>
-      <figure style={figureStyle}>
-        <img
-          style={imageStyle}
-          src="https://bulma.io/images/placeholders/1280x960.png"
-          alt="Placeholder image"
-        />
-      </figure>
-    </div>
+    <Wrapper>
+      <Figure>
+        <Image src="//via.placeholder.com/350x150" alt="Placeholder image" />
+      </Figure>
+      <Figure>
+        <Image src="//via.placeholder.com/150x250" alt="Placeholder image" />
+      </Figure>
+      <Figure>
+        <Image src="//via.placeholder.com/300x100" alt="Placeholder image" />
+      </Figure>
+      <Figure>
+        <Image src="//via.placeholder.com/400x200" alt="Placeholder image" />
+      </Figure>
+      <Figure>
+        <Image src="//via.placeholder.com/350x150" alt="Placeholder image" />
+      </Figure>
+    </Wrapper>
   );
 };
 
