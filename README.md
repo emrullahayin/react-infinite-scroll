@@ -1,6 +1,8 @@
 # react-infinite-scroll
 
-`npm i`
+```
+npm i
+```
 ----
 `cd client`
 ----
