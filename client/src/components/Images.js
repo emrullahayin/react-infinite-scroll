@@ -15,8 +15,8 @@ const Images = () => {
   const [count, setCount] = useState(30);
   const [start, setStart] = useState(1);
 
-  const fetchImages = async (status = false) => {
-    status && setStart(start + count);
+  const fetchImages = async () => {
+    setStart(start + count);
     try {
       const result = await axios
         .get(`/api/photos?count=${count}&start=${start}`)
@@ -29,8 +29,8 @@ const Images = () => {
   };
 
   useEffect(() => {
-    fetchImages(true);
-  });
+    fetchImages();
+  }, []);
 
   return (
     <div>
@@ -40,8 +40,8 @@ const Images = () => {
         hasMore={true}
         loader={<h4>Loading...</h4>}
       >
-        {images.map(image => (
-          <Figure key={image.id}>
+        {images.map((image, index) => (
+          <Figure key={index}>
             <Image source={image.urls.small} />
           </Figure>
         ))}
